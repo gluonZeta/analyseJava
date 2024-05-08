@@ -8,8 +8,14 @@ class OperatorTest {
 
     @Test
     void ternarOperator() {
-        boolean testB = true;
         Operator operator = new Operator();
-        assertFalse(operator.ternarOperator(testB));
+        assertFalse(operator.ternaryOperator(true));
+        assertFalse(operator.ternaryOperator(false));
+    }
+
+    @Test
+    void addition() {
+        Operator operator = new Operator();
+        assertEquals(23, operator.addition(20,3));
     }
 }
