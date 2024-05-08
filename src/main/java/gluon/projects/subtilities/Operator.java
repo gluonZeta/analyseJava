@@ -6,4 +6,8 @@ public class Operator {
         return b? !b : b;
     }
 
+    public int addition(int a, int b) {
+        return a+b;
+    }
+
 }
