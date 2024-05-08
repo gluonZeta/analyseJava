@@ -58,7 +58,6 @@ jobs:
         with:
           java-version: 17
           distribution: 'temurin'
-          cache: maven
 
       - name: 3 - Cache SonarCloud packages
         uses: actions/cache@v3
