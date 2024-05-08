@@ -19,9 +19,10 @@
     <jacoco.version>0.8.11</jacoco.version>
 
     <!-- Sonar Cloud -->
+    <sonar.coverage.exclusions>**/gluon/projects/subtilities/*.java</sonar.coverage.exclusions>
     <sonar.organization>gluonzeta</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    <sonar.coverage.exclusions>**/gluon/projects/subtilities/*.java</sonar.coverage.exclusions>
+
   </properties>
 
   <dependencies>
