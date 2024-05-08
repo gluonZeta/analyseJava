@@ -2,7 +2,7 @@ package gluon.projects.subtilities;
 
 public class Operator {
 
-    public boolean ternaryOperator(Boolean b) {
+    public boolean ternaryOperator(boolean b) {
         return b? !b : b;
     }
 
