@@ -13,14 +13,13 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
     <slf4j.version>2.0.10</slf4j.version>
     <logback.version>1.5.0</logback.version>
     <jacoco.version>0.8.11</jacoco.version>
 
     <!-- Sonar Cloud -->
-    <sonar.coverage.exclusions>**/gluon/projects/subtilities/*.java</sonar.coverage.exclusions>
     <sonar.organization>gluonzeta</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
