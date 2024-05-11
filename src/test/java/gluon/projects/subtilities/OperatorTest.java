@@ -27,6 +27,6 @@ class OperatorTest {
 
     @Test
     void incrementation() {
-        assertEquals(5, this.operator.incrementation());
+        assertEquals(6, this.operator.incrementation());
     }
 }

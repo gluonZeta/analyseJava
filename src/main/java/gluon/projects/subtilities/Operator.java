@@ -11,6 +11,7 @@ public class Operator {
 
     public int incrementation() {
         int x = 5;
-        return x++;
+        x++;
+        return x;
     }
 }

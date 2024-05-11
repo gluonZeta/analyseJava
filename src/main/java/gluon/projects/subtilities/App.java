@@ -9,6 +9,6 @@ public class App {
     public static void main( String[] args ) {
         logger.info("Hehehe");
         int x = 5;
-        System.out.println("x: " + x++ + " ### x: " + x);
+        logger.info("x: " + x++ + " ### x: " + x);
     }
 }
