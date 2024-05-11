@@ -10,4 +10,9 @@ public class Operator {
         return a+b;
     }
 
+    public int incrementation() {
+        int x = 5;
+        return x++;
+    }
+
 }
