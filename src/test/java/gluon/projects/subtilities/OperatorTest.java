@@ -24,4 +24,9 @@ class OperatorTest {
     void addition() {
         assertEquals(21, this.operator.addition(15, 6));
     }
+
+    @Test
+    void incrementation() {
+        assertEquals(5, this.operator.incrementation());
+    }
 }
