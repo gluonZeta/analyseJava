@@ -26,7 +26,7 @@ public class Utilities {
         List<String> cryptoInfos = new ArrayList<>();
         List<String> symbolExclus = excludeSymbol();
 
-        String CRYPTO_SYMBOL_FILE_PATH = "src/main/resources/cryptoAAnalyser.csv";
+        final String CRYPTO_SYMBOL_FILE_PATH = "src/main/resources/cryptoAAnalyser.csv";
         String csvFileLine;
         String symbol;
 
@@ -39,9 +39,9 @@ public class Utilities {
             }
             cryptoInfos.remove(0); // Delete the header
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return cryptoInfos;
     }
