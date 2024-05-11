@@ -8,5 +8,7 @@ public class App {
     private static Logger logger = LoggerFactory.getLogger(App.class);
     public static void main( String[] args ) {
         logger.info("Hehehe");
+        int x = 5;
+        System.out.println("x: " + x++ + " ### x: " + x);
     }
 }
