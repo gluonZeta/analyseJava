@@ -1,7 +1,6 @@
 package gluon.projects.subtilities;
 
 public class Operator {
-
     public boolean ternaryOperator(boolean b) {
         return b? !b : b;
     }
@@ -14,5 +13,4 @@ public class Operator {
         int x = 5;
         return x++;
     }
-
 }
