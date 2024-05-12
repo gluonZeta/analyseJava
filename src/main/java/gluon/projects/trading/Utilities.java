@@ -45,8 +45,6 @@ public class Utilities {
                 }
             }
             cryptoInfos.remove(0); // Delete the header
-        } catch (FileNotFoundException e) {
-            logger.error("",e);
         } catch (IOException e) {
             logger.error("",e);
         }
