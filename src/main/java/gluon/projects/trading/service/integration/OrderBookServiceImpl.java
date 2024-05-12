@@ -28,9 +28,12 @@ public class OrderBookServiceImpl implements OrderBookService{
 
         try {
             httpResponse = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException e) {
             logger.error("XXXXXXX",e);
-            if(e instanceof InterruptedException) Thread.interrupted();
+
+        } catch (InterruptedException e) {
+            logger.warn("XXXXXXX", e);
+            Thread.currentThread().interrupted();
         }
 
         return httpResponse.body();
