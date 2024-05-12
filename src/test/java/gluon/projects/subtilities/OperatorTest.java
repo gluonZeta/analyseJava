@@ -13,7 +13,7 @@ class OperatorTest {
     void setUp() {
         this.operator = new Operator();
     }
-    
+
     @Test
     void addition() {
         assertEquals(21, this.operator.addition(15, 6));

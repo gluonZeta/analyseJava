@@ -29,25 +29,26 @@ public class Utilities {
     }
 
     public static List<String> getCryptoSymbolWithFilter() {
-        List<String> cryptoInfos = new ArrayList<>();
-        List<String> symbolExclus = excludeSymbol();
+        List<String> cryptoSymbols = new ArrayList<>();
+        List<String> symbolExcludes = excludeSymbol();
 
         final String CRYPTO_SYMBOL_FILE_PATH = "src/main/resources/cryptoAAnalyser.csv";
         String csvFileLine;
-        String symbol;
+        String swapSymbol;
 
         try (BufferedReader br = new BufferedReader(new FileReader(CRYPTO_SYMBOL_FILE_PATH))) {
             while ((csvFileLine = br.readLine()) != null) {
-                symbol = csvFileLine.split(";")[4];
-                if(!symbolExclus.contains(symbol)) {
-                    cryptoInfos.add(symbol);
+                swapSymbol = csvFileLine.split(";")[4];
+                if(!symbolExcludes.contains(swapSymbol)) {
+                    cryptoSymbols.add(swapSymbol);
                 }
             }
-            cryptoInfos.remove(0); // Delete the header
+            cryptoSymbols.remove(0); // Delete the header
         } catch (IOException e) {
             logger.error("",e);
+            throw new RuntimeException(e);
         }
-        return cryptoInfos;
+        return cryptoSymbols;
     }
 
 }
