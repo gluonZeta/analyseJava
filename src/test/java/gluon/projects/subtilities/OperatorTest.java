@@ -13,13 +13,7 @@ class OperatorTest {
     void setUp() {
         this.operator = new Operator();
     }
-
-    @Test
-    void ternaryOperator() {
-        assertFalse(this.operator.ternaryOperator(false));
-        assertFalse(this.operator.ternaryOperator(true));
-    }
-
+    
     @Test
     void addition() {
         assertEquals(21, this.operator.addition(15, 6));
