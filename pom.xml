@@ -22,7 +22,12 @@
     <!-- Sonar Cloud -->
     <sonar.organization>gluonzeta</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    <sonar.coverage.exclusions>**/gluon/projects/subtilities/App.java,**/gluon/projects/trading/Main.java</sonar.coverage.exclusions>
+    <sonar.coverage.exclusions>
+      **/gluon/projects/subtilities/App.java,
+      **/gluon/projects/trading/Main.java,
+      **/gluon/projects/trading/myexceptions/CryptoInfoFileNotFoundException.java,
+      **/gluon/projects/trading/*.java
+    </sonar.coverage.exclusions>
   </properties>
 
   <dependencies>
