@@ -28,9 +28,7 @@ public class OrderBookServiceImpl implements OrderBookService{
 
         try {
             httpResponse = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
-        } catch (IOException e) {
-            logger.error("XXXXXXX",e);
-        } catch (InterruptedException e) {
+        } catch (IOException | InterruptedException e) {
             logger.error("XXXXXXX",e);
         }
 
