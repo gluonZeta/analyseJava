@@ -47,8 +47,6 @@ public class Utilities {
             cryptoSymbols.remove(0); // Delete the header
         } catch (IOException e) {
             logger.error("XXXXXXX",e);
-            throw new CryptoInfoFileNotFoundException("Cannot find crypto list file", e);
-
         }
         return cryptoSymbols;
     }

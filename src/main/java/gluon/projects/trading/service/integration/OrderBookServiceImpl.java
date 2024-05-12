@@ -17,7 +17,7 @@ public class OrderBookServiceImpl implements OrderBookService{
                 .newBuilder()
                 .uri(URI.create(orderBookUrl.toString()))
                 .build();
-        HttpClient httpClient = HttpClient.newHttpClient();;
+        HttpClient httpClient = HttpClient.newHttpClient();
         HttpResponse<String> httpResponse;
 
         try {
