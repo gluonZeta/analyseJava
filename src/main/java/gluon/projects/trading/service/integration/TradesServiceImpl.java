@@ -35,6 +35,7 @@ public class TradesServiceImpl implements TradesService {
             Thread.currentThread().interrupt();
         }
 
-        return httpResponse.body();
+        if(httpResponse != null) return httpResponse.body();
+        else return null;
     }
 }

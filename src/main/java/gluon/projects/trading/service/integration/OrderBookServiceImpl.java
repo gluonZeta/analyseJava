@@ -36,6 +36,7 @@ public class OrderBookServiceImpl implements OrderBookService{
             Thread.currentThread().interrupt();
         }
 
-        return httpResponse.body();
+        if(httpResponse != null) return httpResponse.body();
+        else return null;
     }
 }
