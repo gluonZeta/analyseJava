@@ -1,5 +1,6 @@
 package gluon.projects.trading;
 
+import gluon.projects.trading.myexceptions.CryptoInfoFileNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,8 +46,9 @@ public class Utilities {
             }
             cryptoSymbols.remove(0); // Delete the header
         } catch (IOException e) {
-            logger.error("",e);
-            throw new RuntimeException(e);
+            logger.error("XXXXXXX",e);
+            throw new CryptoInfoFileNotFoundException("Cannot find crypto list file", e);
+
         }
         return cryptoSymbols;
     }
