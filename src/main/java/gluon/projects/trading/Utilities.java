@@ -1,6 +1,5 @@
 package gluon.projects.trading;
 
-import gluon.projects.trading.myexceptions.CryptoInfoFileNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
