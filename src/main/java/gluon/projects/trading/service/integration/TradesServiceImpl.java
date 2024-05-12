@@ -14,7 +14,7 @@ public class TradesServiceImpl implements TradesService {
     private static Logger logger = LoggerFactory.getLogger(TradesServiceImpl.class);
 
     @Override
-    public String getLastTrades(String symbol, String limit) {
+    public String getLastTrades(String symbol, String limit) throws InterruptedException {
         StringBuilder recentTradesUrl = new StringBuilder("https://api.binance.com/api/v3/trades");
         recentTradesUrl.append("?symbol=" + symbol);
         recentTradesUrl.append("&limit=" + limit);
@@ -32,7 +32,7 @@ public class TradesServiceImpl implements TradesService {
             logger.error("XXXXXXX",e);
         } catch (InterruptedException e) {
             logger.warn("XXXXXXX", e);
-            Thread.currentThread().interrupted();
+            throw e;
         }
 
         return httpResponse.body();
