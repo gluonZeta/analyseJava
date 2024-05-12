@@ -48,7 +48,7 @@ public class Utilities {
         } catch (FileNotFoundException e) {
             logger.error("",e);
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("",e);
         }
         return cryptoInfos;
     }
