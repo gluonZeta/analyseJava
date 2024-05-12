@@ -14,7 +14,7 @@ public class OrderBookServiceImpl implements OrderBookService{
     private static Logger logger = LoggerFactory.getLogger(OrderBookServiceImpl.class);
 
     @Override
-    public String getOrderBook(String symbol, String limit) throws InterruptedException {
+    public String getOrderBook(String symbol, String limit) {
         StringBuilder orderBookUrl = new StringBuilder("https://api.binance.com/api/v3/depth");
         orderBookUrl.append("?symbol=" + symbol);
         orderBookUrl.append("&limit=" + limit);
