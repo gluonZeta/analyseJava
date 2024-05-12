@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         List<String> cryptoSymbols = Utilities.getCryptoSymbolWithFilter();
         for(int i = 0; i < cryptoSymbols.size(); i++) {
-            logger.info(cryptoSymbols.get(i));
+            if(logger.isInfoEnabled()) logger.info(cryptoSymbols.get(i));
         }
     }
 
