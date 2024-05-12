@@ -26,7 +26,7 @@
       **/gluon/projects/subtilities/App.java,
       **/gluon/projects/trading/Main.java,
       **/gluon/projects/trading/myexceptions/CryptoInfoFileNotFoundException.java,
-      **/gluon/projects/trading/*.java
+      **/gluon/projects/trading/data/*.java
     </sonar.coverage.exclusions>
   </properties>
 
