@@ -14,6 +14,8 @@ public class Utilities {
 
     private static Logger logger = LoggerFactory.getLogger(Utilities.class);
 
+    private Utilities() {}
+
     private static List<String> excludeSymbol() {
         List<String> symbolExclus = new ArrayList<>();
         symbolExclus.add("BTCUSDT");
