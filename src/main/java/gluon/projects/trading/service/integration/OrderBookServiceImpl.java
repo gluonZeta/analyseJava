@@ -32,8 +32,8 @@ public class OrderBookServiceImpl implements OrderBookService{
             logger.error("XXXXXXX",e);
 
         } catch (InterruptedException e) {
-            logger.warn("XXXXXXX", e);
-            throw e;
+            logger.error("XXXXXXX", e);
+            Thread.currentThread().interrupt();
         }
 
         return httpResponse.body();
