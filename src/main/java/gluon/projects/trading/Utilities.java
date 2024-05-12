@@ -1,5 +1,8 @@
 package gluon.projects.trading;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -8,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Utilities {
+
+    private static Logger logger = LoggerFactory.getLogger(Utilities.class);
 
     private static List<String> excludeSymbol() {
         List<String> symbolExclus = new ArrayList<>();
@@ -39,7 +44,7 @@ public class Utilities {
             }
             cryptoInfos.remove(0); // Delete the header
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            logger.error("",e);
         } catch (IOException e) {
             e.printStackTrace();
         }
